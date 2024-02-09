@@ -15,6 +15,7 @@ h1, h2 {
 
 h1 {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .grid {
@@ -64,6 +65,7 @@ h1 {
 
 .logo {
 position: inline-block;
+    vertical-align: middle;
     height: 150px;
     width: auto;
     margin: 20px;
