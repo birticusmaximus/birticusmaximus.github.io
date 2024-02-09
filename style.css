@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+h1, h2 {
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin: 20px;
+    }
+
+.cell {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-size: 1.1rem;
+}
+
+.header {
+    background-color: #e7e7e7;
+    font-weight: bold;
+    font-family: "Exo", "Lato", "Helvetica";
+    font-size: 1.4rem;
+}
+
+
+.info-box {
+    display: none;
+    position: fixed; /* Use fixed to position according to the viewport */
+    top: 100px;
+    left: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 100px;
+    z-index: 100;
+    width: 200px;
+    pointer-events: none; /* Prevents the box from interfering with mouse events */
+}
+
+.cell:hover .info-box {
+    display: block;
+}
+
+.highlight {
+    background-color: orange;
+}
