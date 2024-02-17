@@ -25,7 +25,13 @@ var card2Selected;
 window.onload = function() {
     shuffleCards();
     startGame();
+    document.getElementById("reloadGame").addEventListener("click", function() {
+        clearBoard(); // Clears the current board and resets the game
+        shuffleCards(); // Shuffles the cards
+        startGame(); // Starts a new game
+    });
 }
+
 
 function shuffleCards() {
     cardSet = cardList.concat(cardList); //two of each card
@@ -112,3 +118,18 @@ function update() {
     card1Selected = null;
     card2Selected = null;
 }
+
+function clearBoard() {
+    document.getElementById("board").innerHTML = ""; // Clears the board
+    board = []; // Resets the board array
+    errors = 0; // Resets the errors count
+    document.getElementById("errors").innerText = errors; // Updates the errors display
+    card1Selected = null;
+    card2Selected = null;
+}
+
+document.getElementById("reloadGame").addEventListener("click", function() {
+    clearBoard(); // Clears the current board
+    shuffleCards(); // Shuffles the cards
+    startGame(); // Starts a new game
+});
